@@ -1,0 +1,169 @@
+---
+title: Analiza ladijskih nesreč
+author: Bor Bregant
+date: 24. oktober 2021
+output:
+  prettydoc::html_pretty:
+    theme: cayman
+    highlight: github
+---
+
+<!--  --- -->
+<!--  title: "Analiza ladijskih nesreč" -->
+<!--  author: "Bor Bregant" -->
+<!--  date: 'date' -->
+<!--  output: -->
+<!--    html_document: default -->
+<!--    pdf_document: -->
+<!--      includes: -->
+<!--        in_header: lib/styles.sty -->
+<!--      latex_engine: xelatex -->
+<!--    runtime: shiny -->
+<!--  --- -->
+<!--  Ta del mora biti v prvi vrstici da deluje -->
+
+
+
+
+
+```{r setup, echo=FALSE, results='hide', message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE)
+# Uvoz vseh potrebnih knjižnic
+source("lib/libraries.r", encoding="UTF-8")
+```
+
+```{r rstudio, results='asis'}
+# Izris povezave do RStudia na Binderju
+source("lib/rstudio.r", encoding="UTF-8")
+```
+***
+# Uvod
+
+<p align="right">
+  <img align="right" src="slike/nesreca1.jpg" height="120" >
+</p>
+<!--  Morda bi bilo bolje sirsa slika da gre tekst v visino? -->
+
+V projektu je analiza nesreč z rekreativnimi plovili. Deskriptivno so prikazane okoliščine nesreč, analitično pa je vključena še linearna regresija števila smrtnih nesreč v oziru na število registriranih plovil in povprečnega prihodka državljana ZDA. V shiny je še spletna aplikacija, ki prikazuje število nesreč v oziru na okoliščine nesreče.
+
+***
+# Spletna povezava do vira tabel za nesreče [pdf], spletna povezava do vira povrečnega prihodka in grob opis podatkov izvlečenih tabel:
+
+[2020 Recreational boating statistics](<https://uscgboating.org/library/accident-statistics/Recreational-Boating-Statistics-2020.pdf>)
+
+[Pihodek v ZDA v letu 2020](<https://fred.stlouisfed.org/series/A792RC0A052NBEA>)
+
+
+```{r uvoz, echo=FALSE, message=FALSE, warning=FALSE }
+source("uvoz/uvoz.r", encoding="UTF-8")
+```
+
+1. TABELA: (Nesreče v posameznih mesecih)
+- 1.  Mesec
+- 2.  Smrtne nesreče
+- 3.  Nesmrtne nesreče
+- 4.  Vse nesreče
+- 5.  Procent smrtnih nesreč
+- 6.  Število smrti
+
+2. TABELA: (Nesreče v posameznih letij)
+- 1.  Leto
+- 2.  Smrtne nesreče
+- 3.  Nesmrtne nesreče
+- 4.  Vse nesreče
+
+3. TABELA: (Nesreče v posamezni zvezni državi)
+- 1.  Zvezna država
+- 2.  Vse nesreče
+- 3.  Smrtne nesreče
+- 4.  Vse nesreče
+- 5.  Oškodovani
+- 6.  Število smrti
+- 7.  Število ponesrečencev
+- 8.  Škoda v USD
+
+4. TABELA: (Število registriranih plovil)
+- 1.  Leto
+- 2.  Število smrti
+- 3.  Število registriranih plovil
+- 4.  Delež smrtnih izidov
+- 5.  Število smrti v plovilih z motorjem
+- 6.  Število registriranih motornih plovil
+- 7.  Delež smrnih izidov z motornim plovilom
+
+5. TABELA: (Prihodek državljana ZDA)
+- 1.  Leto
+- 2.  Povprečni prihodek
+
+6. TABELA: (Vzrok nesreč)
+- 1.  Vzrok
+- 2.  Število nesreč
+- 3.  Število smrti
+- 4.  Število poškodb
+- 5.  Tip nesreče
+
+***
+
+# Vizualizacija podatkov
+
+```{r vizualizacija, echo=FALSE, message=FALSE, warning=FALSE, results='hide'}
+source("vizualizacija/vizualizacija.r", encoding="UTF-8")
+```
+
+
+Na zemljevidu ZDA je prikazano število smrtnih nesreč glede na posamezno zvezno državo.
+
+```{r zemljevid, echo=FALSE, fig.align='left'}
+zemljevid
+```
+
+Graf števila smrti v posameznem mesecu (v letu 2020)
+
+```{r mesecnesmrti, echo=FALSE, message=FALSE, fig.align='left'}
+mesecnesmrti
+```
+
+Graf števila smrti v posameznem letu
+
+```{r letnesmrti, echo=FALSE, message=FALSE, fig.align='left'}
+letnesmrti
+```
+
+
+
+***
+
+# Regresijska analiza
+
+```{r analiza, echo=FALSE, message=FALSE, warning=FALSE, results='hide'}
+source("analiza/analiza.r", encoding="UTF-8")
+```
+
+Grafa števila registriranih plovil in prihodka na prebivalca, ki bosta naši pojasnjevalni količini v regresijskem modelu.
+
+```{r grafa, echo=FALSE, message=FALSE, fig.align='left'}
+grafa
+```
+
+Spodaj vidimo rezultat regresijske analize. Postavimo hipotezo $H_0: \beta_1 =0$ in spotoma $H_0: \beta_2 = 0$, kjer se $\beta_1$ nanaša na število registriranih plovil, $\beta_2$ pa na prihodek. Iz izhoda vidimo, da $|t_1| < 1.96, |t_2| > 1.96$, zato ničelno hipotezo za registrirana plovila lahko zavrnemo.
+
+Pod izhodom si oglejmo še diagnostiko predpostavk linearne regresije. $R^2$ je zelo majhen, kar ni dober znak. Rdeča črta ostankov proti fittanim vrednostim je sicer dobra (ravna okoli 0), a nas motijo same vrednosti (ta preveri samo linearnost podatkov). Drugi in tretji graf sta (morda presentiljo) zadovoljiva.
+```{r povzetek, echo=FALSE, message=FALSE, fig.align='left'}
+povzetek
+```
+
+```{r diagnostika, echo=FALSE, message=FALSE, fig.align='left'}
+par(mfrow = c(2, 2))
+plot(model)
+```
+
+Omenimo, da bi lahko pri linearni regresiji eliminirali trend pri prihodku na prebivalca, da bi to spremenljivko logaritmirali. S tem pristopom ničelne hipoteze tudi za število registriranih plovil ne moremo zavrniti.
+
+# Shiny
+
+<!-- V spodnjem grafičnem prikazu je predstavljeno število nesreč, smrti ter poškodb glede na posamezni tip nesreče, ki ga bralec izbere sam. -->
+
+<!-- ```{r shiny, echo=FALSE} -->
+<!-- shinyAppDir("shiny", options=list(width="100%", height=600)) -->
+<!-- ``` -->
+***
