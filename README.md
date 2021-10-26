@@ -1,6 +1,6 @@
 # Analiza ladijskih nesrec
 
-Repozitorij z gradivi pri predmetu APPR v študijskem letu 2020/21
+Repozitorij z gradivi pri predmetu APPR v študijskem letu 2021/22
 
 * [![Shiny](http://mybinder.org/badge.svg)](https://nbviewer.org/github/borbregant/APPR_Bor/blob/b5df6d8364f335901a954d020d7c097b5fe82045/projekt.html) Notebook
 * [![RStudio](http://mybinder.org/badge.svg)](http://mybinder.org/v2/gh/borbregant/APPR_Bor/master?urlpath=rstudio) RStudio
@@ -52,5 +52,6 @@ Za prikaz aplikacije shiny:
 <ol>
   <li>Odpremo zgornji link do binder -> Rstudio </li>
   <li>V mapi lib in podmapi libraries pozenemo library("ggplot2") in library("readxl)</li>
-  <li>V mapi shiny in kliknemo datoteko server. V tej datoteki kliknemo RunApp</li>
+  <li>V mapi uvoz pozenemo vse vrstice (ctrl+A -> Run)</li>
+  <li>V mapi shiny kliknemo datoteko server. V tej datoteki kliknemo RunApp</li>
 </ol>
