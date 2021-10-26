@@ -45,3 +45,12 @@ Za zagon tega vzorca je potrebno namestiti sledeče pakete za R:
 * `tmap` - za izrisovanje zemljevidov
 * `extrafont` - za pravilen prikaz šumnikov (neobvezno)
 <!--- Dodaj moje knjiznice-->
+
+## Shiny
+
+Za prikaz aplikacije shiny:
+<ol>
+  <li>Odpremo zgornji link do binder -> Rstudio </li>
+  <li>V mapi lib in podmapi libraries pozenemo library("ggplot2") in library("readxl)</li>
+  <li>V mapi shiny in kliknemo datoteko server. V tej datoteki kliknemo RunApp</li>
+</ol>
