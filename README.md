@@ -2,7 +2,7 @@
 
 Repozitorij z gradivi pri predmetu APPR v študijskem letu 2020/21
 
-* [![Shiny](http://mybinder.org/badge.svg)](http://mybinder.org/v2/gh/borbregant/APPR_Bor/master?urlpath=APPR_Bor/projekt.html) Shiny
+* [![Shiny](http://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/borbregant/APPR_Bor/master?labpath=projekt.html) Shiny
 * [![RStudio](http://mybinder.org/badge.svg)](http://mybinder.org/v2/gh/borbregant/APPR_Bor/master?urlpath=rstudio) RStudio
 
 ## Tematika
