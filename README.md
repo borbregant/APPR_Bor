@@ -45,7 +45,3 @@ Za zagon tega vzorca je potrebno namestiti sledeče pakete za R:
 * `tmap` - za izrisovanje zemljevidov
 * `extrafont` - za pravilen prikaz šumnikov (neobvezno)
 <!--- Dodaj moje knjiznice-->
-## Binder
-
-Zgornje [povezave](#analiza-podatkov-s-programom-r-202021)
-omogočajo poganjanje projekta na spletu z orodjem [Binder](https://mybinder.org/).
