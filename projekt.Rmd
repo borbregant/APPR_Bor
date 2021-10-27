@@ -59,48 +59,60 @@ source("uvoz/uvoz.r", encoding="UTF-8")
 ```
 
 1. TABELA: (Nesreče v posameznih mesecih)
-- 1.  Mesec
-- 2.  Smrtne nesreče
-- 3.  Nesmrtne nesreče
-- 4.  Vse nesreče
-- 5.  Procent smrtnih nesreč
-- 6.  Število smrti
+<ol type="i">
+  <li>Mesec                           (faktor)</li>
+  <li>Smrtne nesreče                  (niz)</li>
+  <li>Nesmrtne nesreče                (niz)</li>
+  <li>Vse nesreče                     (niz)</li>
+  <li>Procent smrtnih nesreč          (niz)</li>
+  <li>Število smrti                   (stevilo)</li>
+</ol>
 
 2. TABELA: (Nesreče v posameznih letij)
-- 1.  Leto
-- 2.  Smrtne nesreče
-- 3.  Nesmrtne nesreče
-- 4.  Vse nesreče
+<ol type="i">
+  <li>Leto                            (stevilo)</li>
+  <li>Smrtne nesreče                  (stevilo)</li>
+  <li>Nesmrtne nesreče                (stevilo)</li>
+  <li>Vse nesreče                     (stevilo)</li>
+</ol>
 
 3. TABELA: (Nesreče v posamezni zvezni državi)
-- 1.  Zvezna država
-- 2.  Vse nesreče
-- 3.  Smrtne nesreče
-- 4.  Vse nesreče
-- 5.  Oškodovani
-- 6.  Število smrti
-- 7.  Število ponesrečencev
-- 8.  Škoda v USD
+<ol type="i">
+  <li>Zvezna država                   (niz)</li>
+  <li>Vse nesreče                     (stevilo)</li>
+  <li>Smrtne nesreče                  (stevilo)</li>
+  <li>Vse nesreče                     (stevilo)</li>
+  <li>Oškodovani                      (stevilo)</li>
+  <li>Število smrti                   (stevilo)</li>
+  <li>Število ponesrečencev           (stevilo)</li>
+  <li>Škoda v USD                     (stevilo)</li>
+</ol>
 
 4. TABELA: (Število registriranih plovil)
-- 1.  Leto
-- 2.  Število smrti
-- 3.  Število registriranih plovil
-- 4.  Delež smrtnih izidov
-- 5.  Število smrti v plovilih z motorjem
-- 6.  Število registriranih motornih plovil
-- 7.  Delež smrnih izidov z motornim plovilom
+<ol type="i">
+  <li>Leto        (stevilo)</li>
+  <li>Število smrti   (stevilo)</li>
+  <li>Število registriranih plovil    (stevilo)</li>
+  <li>Delež smrtnih izidov    (stevilo)</li>
+  <li>Število smrti v plovilih z motorjem   (stevilo)</li>
+  <li>Število registriranih motornih plovil   (stevilo)</li>
+  <li>Delež smrnih izidov z motornim plovilom   (stevilo)</li>
+</ol>
 
 5. TABELA: (Prihodek državljana ZDA)
-- 1.  Leto
-- 2.  Povprečni prihodek
+<ol type="i">
+  <li>Leto    (stevilo)</li>
+  <li>Povprečni prihodek    (stevilo)</li>
+</ol>
 
 6. TABELA: (Vzrok nesreč)
-- 1.  Vzrok
-- 2.  Število nesreč
-- 3.  Število smrti
-- 4.  Število poškodb
-- 5.  Tip nesreče
+<ol type="i">
+  <li>Vzrok   (faktor)</li>
+  <li>Število nesreč    (stevilo)</li>
+  <li>Število smrti   (stevilo)</li>
+  <li>Število poškodb   (stevilo)</li>
+  <li>Tip nesreče   (niz)</li>
+</ol>
 
 ***
 

@@ -20,11 +20,10 @@ library(ggplot2)
 library(rgdal)
 library(rgeos)
 library(rmarkdown)
-library(viridis)
 
 library(tidyverse)
 library(dplyr)
-library(mosaic)
+library(mosaic)#za regresijo
 library(readr)
 library(broom)
 library(ggpubr)

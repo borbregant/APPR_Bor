@@ -25,16 +25,19 @@ smrti_leto$Poskodbe[smrti_leto$Poskodbe %in% "251 1"] <- "2511"
 smrti_leto$Poskodbe <- as.numeric(smrti_leto$Poskodbe)
 smrti_leto$Leto[smrti_leto$Leto %in% "2001*"] <- "2001"
 smrti_leto$Leto <- as.numeric(smrti_leto$Leto)
+smrti_leto[, c(2:4)] <- sapply(smrti_leto[, c(2:4)], as.numeric)#sapply pretvori vse v dolocen tip
 
 #=======================================================================================================
 
 #3. tabela
-fatal_state <- read_excel("podatki/fatal_state.xlsx",col_names = c("state","vse",'SmrtneNesrece', 'Nesmrtne', 'Oskodovani',"Smrti","Ponesrecenci","brezveze"))
-#fatal_state <- fatal_state[-c(1,2,3,4,5,6,63,64,65,66,67), ]
+fatal_state <- read_excel("podatki/fatal_state.xlsx",col_names = c("state","Vse",'SmrtneNesrece', 'Nesmrtne', 'Oskodovani',"Smrti","Ponesrecenci","brezveze"))
+#State stolpec mora biti nujno "state", da ga knjiznica usmap razbere
 fatal_state <- fatal_state[-c(1,2,3,4,5,6), ]#pobrise zacetne smeti
 fatal_state <- fatal_state[-c(8,52,53,54,55,56,57,58,59,60,61), ]#pobrise ne-state
 class(fatal_state$Smrti)
 fatal_state$Smrti <- as.numeric(fatal_state$Smrti)
+fatal_state[, c(2:8)] <- sapply(fatal_state[, c(2:8)], as.numeric)
+
 #=======================================================================================================
 
 #4. tabela
@@ -43,6 +46,7 @@ registracije <- registracije[-c(1), ]
 registracije$Registrirane <- as.numeric(registracije$Registrirane)
 registracije$Leto <- as.numeric(registracije$Leto)
 registracije$Smrti <- as.numeric(registracije$Smrti)
+registracije[, c(4:7)] <- sapply(registracije[, c(4:7)], as.numeric)#Par slabo OCR prebranih podatkov da Na, a te ne motijo
 
 #=======================================================================================================
 
