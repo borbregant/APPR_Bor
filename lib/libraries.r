@@ -29,3 +29,4 @@ library(broom)
 library(ggpubr)
 
 library(prettydoc)#za lepsi markdown
+library(rvest)#za tabelo iz wikipedie

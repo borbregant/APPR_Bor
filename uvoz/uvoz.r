@@ -90,3 +90,15 @@ tabela2nova <- tabela2nova[-c(1:12,17:30), ]#pobrise ne prave tipe
 tabela3nova <- tabela3nova[-c(1:16,20:30), ]#pobrise ne prave tipe
 tabela4nova <- tabela4nova[-c(1:19,26:30), ]#pobrise ne prave tipe
 tabela5nova <- tabela5nova[-c(1:25), ]#pobrise ne prave tipe
+
+#===============================================================================
+#                       Uvoz iz wikipedie
+#===============================================================================
+link <- "https://en.wikipedia.org/wiki/The_Ocean_Race"
+
+vmesna <- link %>% 
+  read_html %>% 
+  html_nodes(xpath = '//*[@id="mw-content-text"]/div[1]/table[2]') %>% 
+  html_table
+
+volvorace <- as.data.frame(vmesna)
