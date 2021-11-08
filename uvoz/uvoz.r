@@ -102,3 +102,38 @@ vmesna <- link %>%
   html_table
 
 volvorace <- as.data.frame(vmesna)
+#===============================================================================2017/18 race
+link1 <- "https://en.wikipedia.org/wiki/1985%E2%80%931986_Whitbread_Round_the_World_Race"
+
+vmesna1 <- link1 %>% 
+  read_html %>% 
+  html_nodes(xpath = '//*[@id="mw-content-text"]/div[1]/table[2]') %>% 
+  html_table
+
+volvorace1 <- as.data.frame(vmesna1)
+volvorace1$id <- seq_len(nrow(volvorace1))
+#uvoz koordinat bi lahko s knjiznico ggmap in zanko ampak v binderju ne bi delovalo zaradi API kljucev
+volvorace1$startlon[1] <- 	-1.087222#spremeni koordinate s pomozno tabelo? a bi se to sploh dal al je krozno?
+volvorace1$startlon[2] <- 	18.423300
+volvorace1$startlon[3] <- 	174.763336
+volvorace1$startlon[4] <- -54.93382
+volvorace1$startlat[1] <- 50.805832
+volvorace1$startlat[2] <- -33.918861
+volvorace1$startlat[3] <- -36.848461
+volvorace1$startlat[4] <- -34.94747
+#nekje je napaka.....
+volvorace1$endlon[1] <- 18.423300
+volvorace1$endlat[1] <- -33.918861
+volvorace1$endlon[2] <- 	174.763336
+volvorace1$endlat[2] <- -36.848461
+volvorace1$endlon[3] <- -54.93382
+volvorace1$endlat[3] <- -34.94747
+volvorace1$endlon[4] <- -1.087222
+volvorace1$endlat[4] <- -50.805832
+#pomozna tabela mest
+tabelamest <- volvorace1
+tabelamest <- tabelamest[,-c(1:2,4:7,10:11)]
+tabelamest$prebivalci[1] <- 238137
+tabelamest$prebivalci[2] <- 433688
+tabelamest$prebivalci[3] <- 1463000
+tabelamest$prebivalci[4] <- 9277

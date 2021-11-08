@@ -141,8 +141,22 @@ Graf števila smrti v posameznem letu
 letnesmrti
 ```
 
+## Za dodatek si oglejmo malo regate
 
+Brezvezen graf
 
+```{r brezvezengraf, echo=FALSE, message=FALSE, fig.align='left'}
+brezvezengraf
+```
+
+Graf kolov regate Volvo ocean race v letu 2017/18
+
+```{r grafregate, echo=FALSE, message=FALSE, fig.align='left'}
+grafregate
+```
+<\br>
+<\br>
+<\br>
 ***
 
 # Regresijska analiza
