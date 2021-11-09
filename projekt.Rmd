@@ -143,13 +143,13 @@ letnesmrti
 
 ## Za dodatek si oglejmo malo regate
 
-Brezvezen graf
+Graf, ki prikazuje povzetek regat "Volvo ocean race" v letih 1973-2018. Sam graf ne pove kaj dosti, osi pa so tudi prisilno postavljene.
 
 ```{r brezvezengraf, echo=FALSE, message=FALSE, fig.align='left'}
 brezvezengraf
 ```
 
-Graf kolov regate Volvo ocean race v letu 2017/18
+Oglejmo si zgornjo regato v letu 2017/18. Na zemljevidu lahko vidimo posamezna kola tekme in okvirno pot (ki včasih skipperja pripelje na kopno `r knitr::asis_output("\U1F605")`.
 
 ```{r grafregate, echo=FALSE, message=FALSE, fig.align='left'}
 grafregate

@@ -36,7 +36,7 @@ ggplot(data=prihodek, aes(x=Leto, y=Prihodek)) +
 #                       Volvo race
 #===============================================================================
 
-brezvezengraf <- ggplotly(ggplot(volvorace) + aes(start=Start, finish=Finish,
+brezvezengraf <- ggplotly(ggplot(volvorace) + aes(start=Start, finish=Finish, edition=Edition,
                             x = Legs, y =Entries, colour = Class) + geom_point() + 
                             ylab("stevilo prijav") +
                             xlab("stevilo kolov"))
