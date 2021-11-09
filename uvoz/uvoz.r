@@ -129,7 +129,8 @@ volvorace1$endlat[2] <- -36.848461
 volvorace1$endlon[3] <- -54.93382
 volvorace1$endlat[3] <- -34.94747
 volvorace1$endlon[4] <- -1.087222
-volvorace1$endlat[4] <- -50.805832
+volvorace1$endlat[4] <- 50.805832
+volvorace1$Razdalja <- as.numeric(gsub(",", "", gsub("\\.", "", volvorace1$Distance..nmi.)))
 #pomozna tabela mest
 tabelamest <- volvorace1
 tabelamest <- tabelamest[,-c(1:2,4:7,10:11)]

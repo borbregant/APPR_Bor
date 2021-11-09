@@ -1,7 +1,0 @@
-Dodati shiny v markdown
-urediti binder
-urediti git
-
-mozne izboljsave
-
-boljsi uvoz preglednic z OCR integriranem v R? (na lokalnem osebnem racunalniku mi to ne dela)

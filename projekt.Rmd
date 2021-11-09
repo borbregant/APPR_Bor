@@ -154,11 +154,8 @@ Graf kolov regate Volvo ocean race v letu 2017/18
 ```{r grafregate, echo=FALSE, message=FALSE, fig.align='left'}
 grafregate
 ```
-<\br>
-<\br>
-<\br>
-***
 
+***
 # Regresijska analiza
 
 ```{r analiza, echo=FALSE, message=FALSE, warning=FALSE, results='hide'}

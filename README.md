@@ -2,7 +2,7 @@
 
 Repozitorij z gradivi pri predmetu APPR v študijskem letu 2021/22
 
-* [![Shiny](http://mybinder.org/badge.svg)](https://nbviewer.org/github/borbregant/APPR_Bor/blob/b5df6d8364f335901a954d020d7c097b5fe82045/projekt.html) Notebook
+* [![Shiny](http://mybinder.org/badge.svg)](https://nbviewer.org/github/borbregant/APPR_Bor/blob/master/projekt.html) Notebook
 * [![RStudio](http://mybinder.org/badge.svg)](http://mybinder.org/v2/gh/borbregant/APPR_Bor/master?urlpath=rstudio) RStudio
 
 ## Tematika
@@ -27,31 +27,35 @@ se shranijo v mapo `../zemljevidi/` (torej izven mape projekta).-->
 
 Za zagon tega vzorca je potrebno namestiti sledeče pakete za R:
 
-* `knitr` - za izdelovanje poročila
-* `rmarkdown` - za prevajanje poročila v obliki RMarkdown
-* `shiny` - za prikaz spletnega vmesnika
-* `DT` - za prikaz interaktivne tabele
-* `rgdal` - za uvoz zemljevidov
-* `rgeos` - za podporo zemljevidom
-* `digest` - za zgoščevalne funkcije (uporabljajo se za shranjevanje zemljevidov)
-* `readr` - za branje podatkov
-* `rvest` - za pobiranje spletnih strani
-* `tidyr` - za preoblikovanje podatkov v obliko *tidy data*
-* `dplyr` - za delo s podatki
-* `gsubfn` - za delo z nizi (čiščenje podatkov)
-* `ggplot2` - za izrisovanje grafov
-* `mosaic` - za pretvorbo zemljevidov v obliko za risanje z `ggplot2`
-* `maptools` - za delo z zemljevidi
-* `tmap` - za izrisovanje zemljevidov
-* `extrafont` - za pravilen prikaz šumnikov (neobvezno)
-<!--- Dodaj moje knjiznice-->
+*`knitr`
+*`rvest`
+*`gsubfn`
+*`tidyr`
+*`tmap`
+*`shiny`
+*`readxl`
+*`usmap`
+*`ggplot2`
+*`rgdal`
+*`rgeos`
+*`rmarkdown`
+*`tidyverse`
+*`dplyr`
+*`mosaic`
+*`readr`
+*`broom`
+*`ggpubr`
+*`prettydoc`
+*`rvest`
+*`plotly`
+
 
 ## Shiny
 
 Za prikaz aplikacije shiny:
 <ol>
   <li>Odpremo zgornji link do binder -> Rstudio </li>
-  <li>V mapi lib in podmapi libraries pozenemo library("ggplot2") in library("readxl)</li>
+  <li>V mapi lib in podmapi libraries pozenemo library("ggplot2") in library("readxl")</li>
   <li>V mapi uvoz pozenemo vse vrstice (ctrl+A -> Run)</li>
   <li>V mapi shiny kliknemo datoteko server. V tej datoteki kliknemo RunApp</li>
 </ol>
