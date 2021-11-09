@@ -46,12 +46,23 @@ source("lib/rstudio.r", encoding="UTF-8")
 
 V projektu je analiza nesreč z rekreativnimi plovili. Deskriptivno so prikazane okoliščine nesreč, analitično pa je vključena še linearna regresija števila smrtnih nesreč v oziru na število registriranih plovil in povprečnega prihodka državljana ZDA. V shiny je še spletna aplikacija, ki prikazuje število nesreč v oziru na okoliščine nesreče.
 
+<p align="right">
+  <img align="right" src="slike/volvorace.jpg" height="120" >
+</p>
+
+Dodano je še nekaj splošno globalnih in lokalnih podatkov o regati <i> Volvo ocean race </i> (zgolj za potrebe predmeta, ne ker bi dodalo kakršnokoli vrednosti prvotni ideji nesreč).
+
 ***
-# Spletna povezava do vira tabel za nesreče [pdf], spletna povezava do vira povrečnega prihodka in grob opis podatkov izvlečenih tabel:
+# Spletna povezava do virov podatkov in grob opis podatkov izvlečenih tabel:
 
 [2020 Recreational boating statistics](<https://uscgboating.org/library/accident-statistics/Recreational-Boating-Statistics-2020.pdf>)
 
 [Pihodek v ZDA v letu 2020](<https://fred.stlouisfed.org/series/A792RC0A052NBEA>)
+
+[The ocean race](<https://en.wikipedia.org/wiki/The_Ocean_Race>)
+&#8195;
+&#8195;
+[The ocean race leta 1985/86](<https://en.wikipedia.org/wiki/1985%E2%80%931986_Whitbread_Round_the_World_Race>)
 
 
 ```{r uvoz, echo=FALSE, message=FALSE, warning=FALSE }
@@ -114,8 +125,35 @@ source("uvoz/uvoz.r", encoding="UTF-8")
   <li>Tip nesreče   (niz)</li>
 </ol>
 
-***
+7. TABELA: (Pregled regat Volvo ocean race)
+<ol type="i">
+  <li>Leto   (število)</li>
+  <li>Klasa    (niz)</li>
+  <li>Število kol   (stevilo)</li>
+  <li>Število kratkih podregat   (stevilo)</li>
+  <li>Število prijavljenih ekip   (število)</li>
+  <li>Kraj začetka   (niz)</li>
+  <li>Kraj konca   (niz)</li>
+  <li>Zmagovalna barka   (niz)</li>
+  <li>Zmagovalni skipper   (niz)</li>
+</ol>
 
+8. TABELA: (Pregled regate Volvo ocean race leta 1985/86)
+<ol type="i">
+  <li>Kolo   (niz)</li>
+  <li>Datum začetka    (niz)</li>
+  <li>Kraj začetka   (stevilo)</li>
+  <li>Kraj konca   (stevilo)</li>
+  <li>Razdalja   (število)</li>   <!--  NI OK KER NI TIDYDATA,,,, popravi uvoz -->
+  <li>Zmagovalna ladja   (niz)</li>
+  <li>Razdalja   (število)</li>
+  <li>Zemlj. dolžina začetka   (število)</li>
+  <li>Zemlj. širina začetka   (število)</li>
+  <li>Zemlj. dolžina konca   (število)</li>
+  <li>Zemlj. dolžina konca   (število)</li>
+</ol>
+
+***
 # Vizualizacija podatkov
 
 ```{r vizualizacija, echo=FALSE, message=FALSE, warning=FALSE, results='hide'}
@@ -168,9 +206,10 @@ Grafa števila registriranih plovil in prihodka na prebivalca, ki bosta naši po
 grafa
 ```
 
-Spodaj vidimo rezultat regresijske analize. Postavimo hipotezo $H_0: \beta_1 =0$ in spotoma $H_0: \beta_2 = 0$, kjer se $\beta_1$ nanaša na število registriranih plovil, $\beta_2$ pa na prihodek. Iz izhoda vidimo, da $|t_1| < 1.96, |t_2| > 1.96$, zato ničelno hipotezo za registrirana plovila lahko zavrnemo.
+Spodaj vidimo rezultat regresijske analize. Postavimo hipotezo $H^{(1)}_0: \beta_1 =0$ in spotoma $H^{(2)}_0: \beta_2 = 0$, kjer se $\beta_1$ nanaša na število registriranih plovil, $\beta_2$ pa na prihodek. Iz izhoda vidimo, da $|t_1| < 1.96, |t_2| > 1.96$, zato ničelno hipotezo za registrirana plovila lahko zavrnemo.
 
-Pod izhodom si oglejmo še diagnostiko predpostavk linearne regresije. $R^2$ je zelo majhen, kar ni dober znak. Rdeča črta ostankov proti fittanim vrednostim je sicer dobra (ravna okoli 0), a nas motijo same vrednosti (ta preveri samo linearnost podatkov). Drugi in tretji graf sta (morda presentiljo) zadovoljiva.
+Pod izhodom si oglejmo še diagnostiko predpostavk linearne regresije. $R^2$ je zelo majhen, kar ni dober znak. Rdeča črta ostankov proti fittanim vrednostim je sicer dobra (ravna okoli 0), a nas motijo same vrednosti (ta preveri samo linearnost podatkov). Drugi in tretji graf sta (morda presentljivo) zadovoljiva.
+
 ```{r povzetek, echo=FALSE, message=FALSE, fig.align='left'}
 povzetek
 ```
@@ -182,6 +221,7 @@ plot(model)
 
 Omenimo, da bi lahko pri linearni regresiji eliminirali trend pri prihodku na prebivalca, da bi to spremenljivko logaritmirali. S tem pristopom ničelne hipoteze tudi za število registriranih plovil ne moremo zavrniti.
 
+***
 # Shiny
 
 <!-- V spodnjem grafičnem prikazu je predstavljeno število nesreč, smrti ter poškodb glede na posamezni tip nesreče, ki ga bralec izbere sam. -->
@@ -189,4 +229,4 @@ Omenimo, da bi lahko pri linearni regresiji eliminirali trend pri prihodku na pr
 <!-- ```{r shiny, echo=FALSE} -->
 <!-- shinyAppDir("shiny", options=list(width="100%", height=600)) -->
 <!-- ``` -->
-***
+
