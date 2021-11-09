@@ -27,27 +27,27 @@ se shranijo v mapo `../zemljevidi/` (torej izven mape projekta).-->
 
 Za zagon tega vzorca je potrebno namestiti sledeče pakete za R:
 
-*`knitr`
-*`rvest`
-*`gsubfn`
-*`tidyr`
-*`tmap`
-*`shiny`
-*`readxl`
-*`usmap`
-*`ggplot2`
-*`rgdal`
-*`rgeos`
-*`rmarkdown`
-*`tidyverse`
-*`dplyr`
-*`mosaic`
-*`readr`
-*`broom`
-*`ggpubr`
-*`prettydoc`
-*`rvest`
-*`plotly`
+* `knitr`
+* `rvest`
+* `gsubfn`
+* `tidyr`
+* `tmap`
+* `shiny`
+* `readxl`
+* `usmap`
+* `ggplot2`
+* `rgdal`
+* `rgeos`
+* `rmarkdown`
+* `tidyverse`
+* `dplyr`
+* `mosaic`
+* `readr`
+* `broom`
+* `ggpubr`
+* `prettydoc`
+* `rvest`
+* `plotly`
 
 
 ## Shiny
