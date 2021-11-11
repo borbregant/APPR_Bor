@@ -1,7 +1,7 @@
 ---
 title: Analiza ladijskih nesreč
 author: Bor Bregant
-date: 24. oktober 2021
+date: 10. november 2021
 output:
   prettydoc::html_pretty:
     theme: cayman
