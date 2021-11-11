@@ -1,7 +1,6 @@
 ui <- fluidPage(
   navbarPage("Analiza vzrokov nesrec",
-             
-             
+              
              tabPanel("Operacija plovila",
                       titlePanel("Število nesreč, smrtnih žrtev ali poškodb"),
                       actionButton("nesrece", "Nesrece"),
@@ -9,8 +8,7 @@ ui <- fluidPage(
                       actionButton("poskodbe", "Poskodbe"),
                       hr(),
                       plotOutput("vrsta1")),
-             
-             
+
              tabPanel("Nalaganje potnikov in opreme",
                       titlePanel("Število nesreč, smrtnih žrtev ali poškodb"),
                       actionButton("nesreceloading", "Nesrece"),
@@ -27,7 +25,6 @@ ui <- fluidPage(
                       hr(),
                       plotOutput("vrsta3")),
              
-             
              tabPanel("Okoliščine",
                       titlePanel("Število nesreč, smrtnih žrtev ali poškodb"),
                       actionButton("nesreceokoliscine", "Nesrece"),
@@ -43,6 +40,4 @@ ui <- fluidPage(
                       actionButton("poskodbedrugo", "Poskodbe"),
                       hr(),
                       plotOutput("vrsta5"))
-             
-             
   ))

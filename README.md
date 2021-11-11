@@ -7,7 +7,7 @@ Repozitorij z gradivi pri predmetu APPR v študijskem letu 2021/22
 
 ## Tematika
 
-V projektu je analiza nesrec rekreativnih plovil. Glavni podatki so pridobljeni iz ameriške obalne straže leta 2020 [https://uscgboating.org/library/accident-statistics/Recreational-Boating-Statistics-2020.pdf]. Iz slednjega vira so izluščene tabele, ki so se mi zdele pomembnejše in morda zahtevajo podrobnejšo analizo.
+V projektu je analiza nesrec rekreativnih plovil. Glavni podatki so pridobljeni iz ameriške obalne straže leta 2020 [https://uscgboating.org/library/accident-statistics/Recreational-Boating-Statistics-2020.pdf]. Iz slednjega vira so izluščene tabele, ki so se mi zdele pomembnejše in morda zahtevajo podrobnejšo analizo. Za podkrepitev demonstracije znanja R je dodana še analiza podatkov regate "Volvo ocean race".
 
 ## Program
 

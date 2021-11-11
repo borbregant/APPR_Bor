@@ -1,6 +1,8 @@
 # 2. faza: Uvoz podatkov
 
-#=======================================================================================================
+#===============================================================================
+#                       Uvoz iz PDF (uporabljen OCR pred tem za PDF -> excel)
+#===============================================================================
 
 #1. tabela
 meseci <- read_excel("podatki/meseci.xlsx",col_names = c("Mesec",'SmrtneNesrece', 'Nesmrtne', 'Vse', 'Procent', 'Smrti'))
@@ -15,7 +17,7 @@ meseci$Mesec[meseci$Mesec %in% "August"] <- "Avgust"
 meseci$Mesec[meseci$Mesec %in% "October"] <- "Oktober"
 meseci$Smrti <- as.numeric(meseci$Smrti)
 meseci$Mesec <- factor(meseci$Mesec, levels=unique(meseci$Mesec))#Da ne bo leksikografkso na diagramih
-#=======================================================================================================
+#===============================================================================
 
 #2. tabela
 smrti_leto <- read_excel("podatki/smrti_leto.xlsx",col_names = c("Leto",'Smrti', 'Poskodbe', 'Nesrece'))
@@ -27,7 +29,7 @@ smrti_leto$Leto[smrti_leto$Leto %in% "2001*"] <- "2001"
 smrti_leto$Leto <- as.numeric(smrti_leto$Leto)
 smrti_leto[, c(2:4)] <- sapply(smrti_leto[, c(2:4)], as.numeric)#sapply pretvori vse v dolocen tip
 
-#=======================================================================================================
+#===============================================================================
 
 #3. tabela
 fatal_state <- read_excel("podatki/fatal_state.xlsx",col_names = c("state","Vse",'SmrtneNesrece', 'Nesmrtne', 'Oskodovani',"Smrti","Ponesrecenci","brezveze"))
@@ -38,7 +40,7 @@ class(fatal_state$Smrti)
 fatal_state$Smrti <- as.numeric(fatal_state$Smrti)
 fatal_state[, c(2:8)] <- sapply(fatal_state[, c(2:8)], as.numeric)
 
-#=======================================================================================================
+#===============================================================================
 
 #4. tabela
 registracije <- read_excel("podatki/registracije.xlsx",col_names = c("Leto",'Smrti', 'Registrirane', 'Nerelevantno',"Nerelevantno","Nerelevantno","Nerelevantno"))
@@ -48,7 +50,9 @@ registracije$Leto <- as.numeric(registracije$Leto)
 registracije$Smrti <- as.numeric(registracije$Smrti)
 registracije[, c(4:7)] <- sapply(registracije[, c(4:7)], as.numeric)#Par slabo OCR prebranih podatkov da Na, a te ne motijo
 
-#=======================================================================================================
+#===============================================================================
+#                       Uvoz prihodka
+#===============================================================================
 
 #5. tabela
 
@@ -57,7 +61,7 @@ prihodek$Leto <- format(as.Date(prihodek$Leto, format="%Y-%d-%m"),"%Y")
 prihodek$Prihodek <- as.numeric(prihodek$Prihodek)
 prihodek$Leto <- as.numeric(prihodek$Leto)
 
-#=======================================================================================================
+#===============================================================================
 
 #6. tabela za shiny
 

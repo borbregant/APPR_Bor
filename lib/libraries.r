@@ -4,6 +4,21 @@ library(gsubfn)
 library(tidyr)
 library(tmap)
 library(shiny)
+library(readxl) #za branje excela
+library(usmap)
+library(ggplot2)
+library(rgdal)
+library(rgeos)
+library(rmarkdown)
+library(tidyverse)
+library(dplyr)
+library(mosaic)#za regresijo
+library(readr)
+library(broom)
+library(ggpubr)
+library(prettydoc)#za lepsi markdown
+library(rvest)#za tabelo iz wikipedie
+library(plotly)
 
 options(gsubfn.engine="R")
 
@@ -12,22 +27,3 @@ options(gsubfn.engine="R")
 
 #Če bi hoteli brati PDF in iz njega extractali tabele
 #library(tabulizer) #ta mi žal ne dela, zato uporabim naiven pristop
-library(readxl) #za branje excela
-
-library(usmap)
-library(ggplot2)
-
-library(rgdal)
-library(rgeos)
-library(rmarkdown)
-
-library(tidyverse)
-library(dplyr)
-library(mosaic)#za regresijo
-library(readr)
-library(broom)
-library(ggpubr)
-
-library(prettydoc)#za lepsi markdown
-library(rvest)#za tabelo iz wikipedie
-library(plotly)
