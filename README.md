@@ -2,7 +2,8 @@
 
 Repozitorij z gradivi pri predmetu APPR v študijskem letu 2021/22
 
-* [![Shiny](http://mybinder.org/badge.svg)](https://nbviewer.org/github/borbregant/APPR_Bor/blob/master/projekt.html) Notebook
+* [![Shiny](http://mybinder.org/badge.svg)](https://nbviewer.org/github/borbregant/APPR_Bor/blob/master/projektnotebook.html) Notebook
+* [![Shiny](http://mybinder.org/badge.svg)](http://mybinder.org/v2/gh/borbregant/APPR_Bor/master?urlpath=shiny/APPR_Bor/projekt.Rmd) Shiny
 * [![RStudio](http://mybinder.org/badge.svg)](http://mybinder.org/v2/gh/borbregant/APPR_Bor/master?urlpath=rstudio) RStudio
 
 ## Tematika
