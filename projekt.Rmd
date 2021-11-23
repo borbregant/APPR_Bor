@@ -1,11 +1,12 @@
 ---
 title: Analiza ladijskih nesreč
 author: Bor Bregant
-date: 10. november 2021
+date: 23. november 2021
 output:
   prettydoc::html_pretty:
-    theme: cayman
+    theme: darkly
     highlight: github
+runtime: shiny
 ---
 
 <!--  --- -->
@@ -222,8 +223,8 @@ Omenimo, da bi lahko pri linearni regresiji eliminirali trend pri prihodku na pr
 ***
 # Shiny
 
-<!-- V spodnjem grafičnem prikazu je predstavljeno število nesreč, smrti ter poškodb glede na posamezni tip nesreče, ki ga bralec izbere sam. -->
+V spodnjem grafičnem prikazu je predstavljeno število nesreč, smrti ter poškodb glede na posamezni tip nesreče, ki ga bralec izbere sam.
 
-<!-- ```{r shiny, echo=FALSE} -->
-<!-- shinyAppDir("shiny", options=list(width="100%", height=600)) -->
-<!-- ``` -->
+```{r shiny, echo=FALSE}
+shinyAppDir("shiny", options=list(width="100%", height=600))
+```
