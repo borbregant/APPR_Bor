@@ -22,57 +22,57 @@ Podatki iz PDF bodo primarno obdelano z OCR orodji, ki nam bodo vrnila excelove 
 
 1. TABELA: (Nesreče v posameznih mesecih)
 <ol type="i">
-  <li>Mesec                           (faktor)	</li>
-  <li>Smrtne nesreče                  (število)	</li>
-  <li>Nesmrtne nesreče                (število)	</li>
-  <li>Vse nesreče                     (število)	</li>
-  <li>Procent smrtnih nesreč          (število)	</li>
-  <li>Število smrti                   (število)	</li>
+  <li>Mesec                           (Faktor)	</li>
+  <li>Smrtne nesreče                  (Število)	</li>
+  <li>Nesmrtne nesreče                (Število)	</li>
+  <li>Vse nesreče                     (Število)	</li>
+  <li>Procent smrtnih nesreč          (Število)	</li>
+  <li>Število smrti                   (Število)	</li>
 </ol>
 
 2. TABELA: (Nesreče v posameznih letih)
 <ol type="i">
-  <li>Leto                            (število)	</li>
-  <li>Smrtne nesreče                  (število)	</li>
-  <li>Nesmrtne nesreče                (število)	</li>
-  <li>Število vseh nesreč	      (število)	</li>
+  <li>Leto                            (Število)	</li>
+  <li>Smrtne nesreče                  (Število)	</li>
+  <li>Nesmrtne nesreče                (Število)	</li>
+  <li>Število vseh nesreč	      (Število)	</li>
 </ol>
 
 3. TABELA: (Nesreče v posamezni zvezni državi)
 <ol type="i">
-  <li>Zvezna država                   (niz)	</li>
-  <li>Vse nesreče                     (število)	</li>
-  <li>Smrtne nesreče                  (število)	</li>
-  <li>Nesreče s poškodbami	      (število)	</li>
-  <li>Nesreče le materialne škode     (število)	</li>
-  <li>Število smrti                   (število)	</li>
-  <li>Število ponesrečencev           (število)	</li>
-  <li>Škoda v USD                     (število)	</li>
+  <li>Zvezna država                   (Niz)	</li>
+  <li>Vse nesreče                     (Število)	</li>
+  <li>Smrtne nesreče                  (Število)	</li>
+  <li>Nesreče s poškodbami	      (Število)	</li>
+  <li>Nesreče le materialne škode     (Število)	</li>
+  <li>Število smrti                   (Število)	</li>
+  <li>Število ponesrečencev           (Število)	</li>
+  <li>Škoda v USD                     (Število)	</li>
 </ol>
 
 4. TABELA: (Število registriranih plovil)
 <ol type="i">
-  <li>Leto        				(število)	</li>
-  <li>Število smrti   				(število)	</li>
-  <li>Število registriranih plovil    		(število)	</li>
-  <li>Delež smrtnih izidov    			(število)	</li>
-  <li>Število smrti v plovilih z motorjem   	(število)	</li>
-  <li>Število registriranih motornih plovil   	(število)	</li>
-  <li>Delež smrnih izidov z motornim plovilom   (število)	</li>
+  <li>Leto        				(Število)	</li>
+  <li>Število smrti   				(Število)	</li>
+  <li>Število registriranih plovil    		(Število)	</li>
+  <li>Delež smrtnih izidov    			(Število)	</li>
+  <li>Število smrti v plovilih z motorjem   	(Število)	</li>
+  <li>Število registriranih motornih plovil   	(Število)	</li>
+  <li>Delež smrnih izidov z motornim plovilom   (Število)	</li>
 </ol>
 
 5. TABELA: (Prihodek državljana ZDA)
 <ol type="i">
-  <li>Leto    			(število)	</li>
-  <li>Povprečni prihodek    	(število)	</li>
+  <li>Leto    			(Število)	</li>
+  <li>Povprečni prihodek    	(Število)	</li>
 </ol>
 
 6. TABELA: (Vzrok nesreč)
 <ol type="i">
   <li>Vzrok   		(Niz)		</li>
-  <li>Število nesreč    (število)	</li>
-  <li>Število smrti   	(število)	</li>
-  <li>Število poškodb   (število)	</li>
+  <li>Število nesreč    (Število)	</li>
+  <li>Število smrti   	(Število)	</li>
+  <li>Število poškodb   (Število)	</li>
   <li>Tip nesreče   	(Niz)		</li>
 </ol>
 
