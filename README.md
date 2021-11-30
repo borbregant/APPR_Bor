@@ -2,7 +2,7 @@
 
 Repozitorij z gradivi pri predmetu APPR v študijskem letu 2021/22
 
-* [![Shiny](https://www.svgrepo.com/show/22515/presentation.svg)](https://nbviewer.org/github/borbregant/APPR_Bor/blob/master/predstavitev1.html) Predstavitev
+* [![Shiny](https://github.com/borbregant/APPR_Bor/blob/master/slike/presentationSVG.svg)](https://nbviewer.org/github/borbregant/APPR_Bor/blob/master/predstavitev1.html) Predstavitev
 * [![Shiny](http://mybinder.org/badge.svg)](https://nbviewer.org/github/borbregant/APPR_Bor/blob/master/projektnotebook.html) Notebook (za hiter ogled z manjkajočimi deli)
 * [![Shiny](http://mybinder.org/badge.svg)](http://mybinder.org/v2/gh/borbregant/APPR_Bor/master?urlpath=shiny/APPR_Bor/projekt.Rmd) Shiny (celoten projekt)
 * [![RStudio](http://mybinder.org/badge.svg)](http://mybinder.org/v2/gh/borbregant/APPR_Bor/master?urlpath=rstudio) RStudio
