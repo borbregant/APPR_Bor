@@ -1,7 +1,7 @@
 ---
 title: Analiza ladijskih nesreč
 author: Bor Bregant
-date: 23. november 2021
+date: 30. november 2021
 output:
   prettydoc::html_pretty:
     theme: darkly
@@ -70,86 +70,85 @@ source("uvoz/uvoz.r", encoding="UTF-8")
 
 1. TABELA: (Nesreče v posameznih mesecih)
 <ol type="i">
-  <li>Mesec                           (faktor)</li>
-  <li>Smrtne nesreče                  (niz)</li>
-  <li>Nesmrtne nesreče                (niz)</li>
-  <li>Vse nesreče                     (niz)</li>
-  <li>Procent smrtnih nesreč          (niz)</li>
-  <li>Število smrti                   (stevilo)</li>
+  <li>Mesec                           (Faktor)	</li>
+  <li>Smrtne nesreče                  (Število)	</li>
+  <li>Nesmrtne nesreče                (Število)	</li>
+  <li>Vse nesreče                     (Število)	</li>
+  <li>Procent smrtnih nesreč          (Število)	</li>
+  <li>Število smrti                   (Število)	</li>
 </ol>
 
-2. TABELA: (Nesreče v posameznih letij)
+2. TABELA: (Nesreče v posameznih letih)
 <ol type="i">
-  <li>Leto                            (stevilo)</li>
-  <li>Smrtne nesreče                  (stevilo)</li>
-  <li>Nesmrtne nesreče                (stevilo)</li>
-  <li>Vse nesreče                     (stevilo)</li>
+  <li>Leto                            (Število)	</li>
+  <li>Smrtne nesreče                  (Število)	</li>
+  <li>Nesmrtne nesreče                (Število)	</li>
+  <li>Število vseh nesreč	      (Število)	</li>
 </ol>
 
 3. TABELA: (Nesreče v posamezni zvezni državi)
 <ol type="i">
-  <li>Zvezna država                   (niz)</li>
-  <li>Vse nesreče                     (stevilo)</li>
-  <li>Smrtne nesreče                  (stevilo)</li>
-  <li>Vse nesreče                     (stevilo)</li>
-  <li>Oškodovani                      (stevilo)</li>
-  <li>Število smrti                   (stevilo)</li>
-  <li>Število ponesrečencev           (stevilo)</li>
-  <li>Škoda v USD                     (stevilo)</li>
+  <li>Zvezna država                   (Niz)	</li>
+  <li>Vse nesreče                     (Število)	</li>
+  <li>Smrtne nesreče                  (Število)	</li>
+  <li>Nesreče s poškodbami	      (Število)	</li>
+  <li>Nesreče le materialne škode     (Število)	</li>
+  <li>Število smrti                   (Število)	</li>
+  <li>Število ponesrečencev           (Število)	</li>
+  <li>Škoda v USD                     (Število)	</li>
 </ol>
 
 4. TABELA: (Število registriranih plovil)
 <ol type="i">
-  <li>Leto        (stevilo)</li>
-  <li>Število smrti   (stevilo)</li>
-  <li>Število registriranih plovil    (stevilo)</li>
-  <li>Delež smrtnih izidov    (stevilo)</li>
-  <li>Število smrti v plovilih z motorjem   (stevilo)</li>
-  <li>Število registriranih motornih plovil   (stevilo)</li>
-  <li>Delež smrnih izidov z motornim plovilom   (stevilo)</li>
+  <li>Leto        				(Število)	</li>
+  <li>Število smrti   				(Število)	</li>
+  <li>Število registriranih plovil    		(Število)	</li>
+  <li>Delež smrtnih izidov    			(Število)	</li>
+  <li>Število smrti v plovilih z motorjem   	(Število)	</li>
+  <li>Število registriranih motornih plovil   	(Število)	</li>
+  <li>Delež smrnih izidov z motornim plovilom   (Število)	</li>
 </ol>
 
 5. TABELA: (Prihodek državljana ZDA)
 <ol type="i">
-  <li>Leto    (stevilo)</li>
-  <li>Povprečni prihodek    (stevilo)</li>
+  <li>Leto    			(Število)	</li>
+  <li>Povprečni prihodek    	(Število)	</li>
 </ol>
 
 6. TABELA: (Vzrok nesreč)
 <ol type="i">
-  <li>Vzrok   (faktor)</li>
-  <li>Število nesreč    (stevilo)</li>
-  <li>Število smrti   (stevilo)</li>
-  <li>Število poškodb   (stevilo)</li>
-  <li>Tip nesreče   (niz)</li>
+  <li>Vzrok   		(Niz)		</li>
+  <li>Število nesreč    (Število)	</li>
+  <li>Število smrti   	(Število)	</li>
+  <li>Število poškodb   (Število)	</li>
+  <li>Tip nesreče   	(Niz)		</li>
 </ol>
 
 7. TABELA: (Pregled regat Volvo ocean race)
 <ol type="i">
-  <li>Leto   (število)</li>
-  <li>Klasa    (niz)</li>
-  <li>Število kol   (stevilo)</li>
-  <li>Število kratkih podregat   (stevilo)</li>
-  <li>Število prijavljenih ekip   (število)</li>
-  <li>Kraj začetka   (niz)</li>
-  <li>Kraj konca   (niz)</li>
-  <li>Zmagovalna barka   (niz)</li>
-  <li>Zmagovalni skipper   (niz)</li>
+  <li>Leto   			(Število)</li>
+  <li>Klasa    			(Niz)</li>
+  <li>Število kol   		(Število)</li>
+  <li>Število kratkih podregat  (Število)</li>
+  <li>Število prijavljenih ekip (Število)</li>
+  <li>Kraj začetka   		(Niz)</li>
+  <li>Kraj konca   		(Niz)</li>
+  <li>Zmagovalna barka   	(Niz)</li>
+  <li>Zmagovalni skipper   	(Niz)</li>
 </ol>
 
 8. TABELA: (Pregled regate Volvo ocean race leta 1985/86)
 <ol type="i">
-  <li>Kolo   (niz)</li>
-  <li>Datum začetka    (niz)</li>
-  <li>Kraj začetka   (stevilo)</li>
-  <li>Kraj konca   (stevilo)</li>
-  <li>Razdalja   (število)</li>   <!--  NI OK KER NI TIDYDATA,,,, popravi uvoz -->
-  <li>Zmagovalna ladja   (niz)</li>
-  <li>Razdalja   (število)</li>
-  <li>Zemlj. dolžina začetka   (število)</li>
-  <li>Zemlj. širina začetka   (število)</li>
-  <li>Zemlj. dolžina konca   (število)</li>
-  <li>Zemlj. dolžina konca   (število)</li>
+  <li>Kolo			(Niz)</li>
+  <li>Datum začetka		(Datumski vektor)</li>
+  <li>Kraj začetka   		(Niz)</li>
+  <li>Kraj konca   		(Niz)</li>
+  <li>Razdalja podregate	(Število)</li>
+  <li>Zmagovalna ladja   	(Niz)</li>
+  <li>Zemlj. dolžina začetka   	(Število)</li>
+  <li>Zemlj. širina začetka   	(Število)</li>
+  <li>Zemlj. dolžina konca   	(Število)</li>
+  <li>Zemlj. širina konca   	(Število)</li>
 </ol>
 
 ***
