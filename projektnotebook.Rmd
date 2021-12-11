@@ -213,3 +213,22 @@ plot(model)
 ```
 
 Omenimo, da bi lahko pri linearni regresiji eliminirali trend pri prihodku na prebivalca, da bi to spremenljivko logaritmirali. S tem pristopom ničelne hipoteze tudi za število registriranih plovil ne moremo zavrniti.
+
+***
+# Clustering
+
+```{r clustering, echo=FALSE, message=FALSE, warning=FALSE, results='hide'}
+source("analiza/clustering.r", encoding="UTF-8")
+```
+
+<p align="center">
+  <img align="center" src="slike/saving_plot1.jpeg" height="500" >
+</p>
+
+```{r clustervisual, echo=FALSE, message=FALSE, fig.align='left'}
+clustervisual
+```
+
+<p align="center">
+  <img align="center" src="slike/kolena.png" height="500" >
+</p>

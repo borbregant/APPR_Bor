@@ -19,6 +19,9 @@ library(ggpubr)
 library(prettydoc)#za lepsi markdown
 library(rvest)#za tabelo iz wikipedie
 library(plotly)
+library(cluster)
+library(factoextra)
+library(gridExtra)
 
 options(gsubfn.engine="R")
 
