@@ -221,13 +221,18 @@ Omenimo, da bi lahko pri linearni regresiji eliminirali trend pri prihodku na pr
 source("analiza/clustering.r", encoding="UTF-8")
 ```
 
+Spodnja dendograma prikazujeta 3 skupine zveznih držav, ki se najbolj ujemajo po številu nesreč. Kot bi pričakovali, sta Kalifornija in Florida močno ločeni od ostalih. Texas je rahlo presenetljiv. Analizo bi lahko izboljšali z upoštevanjem števila prebivalcev v posamezni zvezni državi in centriranjem podatkov glede na delež ozemlja, ki meji na vodo.
+
 <p align="center">
   <img align="center" src="slike/saving_plot1.jpeg" height="500" >
 </p>
 
-```{r clustervisual, echo=FALSE, message=FALSE, fig.align='left'}
+
+```{r clustervisual, echo=FALSE, message=FALSE, fig.align='center'}
 clustervisual
 ```
+
+Spodnji diagram prikazuje spreminjanje razdalje med skupinami v vsakem koraku združevanja. Optimalne izbire števila kolen so označene z modrimi pikami.
 
 <p align="center">
   <img align="center" src="slike/kolena.png" height="500" >
